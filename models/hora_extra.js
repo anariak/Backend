@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Hora_Extra.associate = function(models) {
     // associations can be defined here
+    Hora_Extra.belongsTo(models.Persona)
   };
   return Hora_Extra;
 };

@@ -9,6 +9,9 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Permisos.associate = function(models) {
     // associations can be defined here
+    Permisos.belongsTo(models.Persona,{
+      foreingKey:persona.id
+    })
   };
   return Permisos;
 };
